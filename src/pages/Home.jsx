@@ -13,7 +13,7 @@ const services = [
 ];
 const links = [['Inicio', '#inicio'], ['Nosotros', '#nosotros'], ['Servicios', '#servicios'], ['Testimonios', '#testimonios']];
 function Arrow() { return <span aria-hidden="true">↗</span>; }
-function Brand() { return <a className="brand" href="#inicio" aria-label="980 Láser, inicio"><img src="/logo-980.png" alt="" /><span>980 <b>LÁSER</b><small>ESTÉTICA & BIENESTAR</small></span></a>; }
+function Brand() { return <a className="brand" href="#inicio" aria-label="980 Láser, inicio"><img src="/logo-980.png" alt="980 Láser" /></a>; }
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
