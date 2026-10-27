@@ -50,7 +50,7 @@ vite.config.js      Configuración de Vite
 
 Encabezado con menú móvil, presentación, servicios desplegables, información del centro, proceso de atención, espacio para testimonios, preguntas frecuentes y contacto.
 
-- El logo provisional en `public/logo-980.png` muestra solo la figura de la mujer sobre fondo transparente; puede sustituirse conservando el nombre del archivo.
+- El logo provisional en `public/logo-980.png` muestra las figuras de una mujer y un hombre frente a frente; se utiliza en el menú, el pie y la pestaña del navegador. Puede sustituirse conservando el nombre del archivo.
 - Los textos, servicios y enlaces de imágenes están en `src/pages/Home.jsx`.
 - Los colores y la adaptación a móvil están en `src/styles/global.css`.
 - Las fotografías de ambientación se cargan desde Unsplash y las fuentes desde Google Fonts, por lo que requieren conexión. No representan instalaciones, personal ni resultados de 980 Láser.
