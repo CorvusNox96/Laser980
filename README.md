@@ -22,6 +22,15 @@ npm run preview
 
 La compilación genera los archivos estáticos en `dist/`.
 
+## Despliegue en Render como Web Service
+
+Selecciona el repositorio `CorvusNox96/Laser980`, la rama `main`, el entorno Node y el plan Free. Deja Root Directory vacío.
+
+- Build Command: `npm ci && npm run build`
+- Start Command: `npm start`
+
+El servidor incluido sirve `dist/` en `0.0.0.0` y utiliza el puerto `PORT` asignado por Render. Si Render pide verificar la cuenta mediante tarjeta, elegir el plan Free no elimina ese requisito de la cuenta.
+
 ## Estructura
 
 ```text
