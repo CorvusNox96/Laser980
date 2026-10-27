@@ -20,16 +20,16 @@ npm run build
 npm run preview
 ```
 
-La compilación genera los archivos estáticos en `out/`.
+La compilación genera los archivos estáticos en `dist/`.
 
 ## Despliegue en Render como sitio estático
 
 Selecciona el repositorio `CorvusNox96/Laser980` y la rama `main`. Deja Root Directory vacío.
 
 - Build Command: `npm ci && npm run build`
-- Publish Directory: `out`
+- Publish Directory: `dist`
 
-Render publica directamente los archivos generados en `out/`.
+Render publica directamente los archivos generados en `dist/`.
 
 ## Estructura
 
