@@ -1,6 +1,6 @@
 # 980 Laser
 
-Página de inicio del centro de estética y bienestar 980 Láser, en La Habana, con React y Vite.
+Sitio con páginas independientes del centro de estética y bienestar 980 Láser, en La Habana, con React y Vite.
 
 ## Requisitos
 
@@ -48,12 +48,28 @@ vite.config.js      Configuración de Vite
 
 ## Contenido de la primera versión
 
-Encabezado con menú móvil, presentación, servicios desplegables, información del centro, proceso de atención, espacio para testimonios, preguntas frecuentes y contacto.
+Encabezado con menú móvil, presentación, páginas de servicios, información del centro, proceso de atención, espacio para testimonios, preguntas frecuentes y contacto.
 
-- El logo provisional en `public/logo-laser-transparente.png` muestra un lápiz láser cromado con su cable formando un aro abierto, con fondo transparente. Se utiliza en el menú, el pie y la pestaña del navegador. El nombre «980 LÁSER» y el subtítulo «ESTÉTICA & BIENESTAR» aparecen junto al logo.
+- El logo en `public/logo-980-tipografia.png` contiene «980 TRATAMIENTOS LASER» sobre fondo transparente. Se utiliza en el encabezado, el pie y la pestaña del navegador. En la página, una sombra CSS sigue el contorno de las letras y los números.
 - Los textos, servicios y enlaces de imágenes están en `src/pages/Home.jsx`.
 - Los colores y la adaptación a móvil están en `src/styles/global.css`.
 - Las fotografías de ambientación se cargan desde Unsplash y las fuentes desde Google Fonts, por lo que requieren conexión. No representan instalaciones, personal ni resultados de 980 Láser.
 - Los testimonios, teléfono, dirección exacta y horarios están pendientes de información real. No se envían reservas ni se recopilan datos personales.
 
 Referencias de organización y presentación: https://dermacelaserclinic.ca/ y https://lasersinmedicine.com.au/. El contenido de servicios procede de la descripción de 980 Láser.
+
+## Navegación y páginas
+
+Por ahora se definen siete páginas. Las páginas nuevas contienen solo su encabezado; su contenido se desarrollará posteriormente.
+
+- Inicio: `src/pages/Home.jsx`, ruta `/`.
+- Servicios (menú desplegable, sin página propia):
+  - Equipamientos: `Equipment.jsx`, ruta `/servicios/equipamientos/`.
+  - Separador visual.
+  - Capilares y vasos superficiales: `Capillaries.jsx`, ruta `/servicios/capilares/`.
+  - Cuidado de uñas: `NailCare.jsx`, ruta `/servicios/unas/`.
+  - Cuidado de la piel: `SkinCare.jsx`, ruta `/servicios/piel/`.
+- Preguntas frecuentes: `Faq.jsx`, ruta `/preguntas-frecuentes/`.
+- Nosotros (al final): `About.jsx`, ruta `/nosotros/`.
+
+Todos los archivos de página están en `src/pages/`. `NotFound.jsx` es la vista auxiliar para direcciones inexistentes. `src/routes.js` define rutas y metadatos. El sitio se sirve desde la raíz del dominio y genera un HTML por ruta para alojamiento estático.
