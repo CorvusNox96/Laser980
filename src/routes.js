@@ -52,5 +52,10 @@ export const routes = [
     "path": "/nosotros/",
     "title": "Nosotros",
     "description": "Nosotros | 980 Laser, La Habana."
+  },
+  {
+    "path": "/contacto/",
+    "title": "Contáctanos",
+    "description": "Contacta con 980 Laser en La Habana y solicita una cita."
   }
 ];

@@ -154,6 +154,34 @@
 .person-copy p:last-child{max-width:310px;margin-inline:auto}
 @media(max-width:760px){.people-grid{gap:45px}.person-photo{width:145px;height:145px}}
 
+/* Contact page and appointment request. */
+.contact-page-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:75px;align-items:start;padding-block:72px 90px}
+.contact-page-copy>p:not(.eyebrow),.appointment-panel>p:not(.eyebrow){font-size:14px;color:var(--muted)}
+.contact-options{display:grid;gap:12px;margin-top:32px}
+.contact-option{display:grid;gap:5px;padding:19px 22px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .2s,transform .2s}
+.contact-option:hover{border-color:#7da5c6;transform:translateY(-2px)}
+.contact-option span{font-size:10px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
+.contact-option strong{font-size:17px;font-weight:600;overflow-wrap:anywhere}
+.contact-option small{font-size:11px;color:#507da1}
+.appointment-panel{background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:36px}
+.appointment-panel h2{font-size:clamp(28px,2.7vw,39px)}
+.appointment-form{display:grid;gap:18px;margin-top:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.appointment-form label{display:grid;align-content:start;gap:8px;font-size:12px;font-weight:600}
+.appointment-form label span,.form-radio legend span{color:#9b3e3e}
+.appointment-form input:not([type=radio]),.appointment-form select,.appointment-form textarea{width:100%;border:1px solid #cbdbe9;border-radius:4px;background:#fff;color:var(--green);font:inherit;font-size:14px;padding:12px 13px;min-height:46px}
+.appointment-form textarea{resize:vertical}
+.appointment-form input:focus,.appointment-form select:focus,.appointment-form textarea:focus{outline:2px solid #7da5c6;outline-offset:1px}
+.form-radio{border:0;padding:0;margin:0;display:flex;align-items:end;gap:18px;flex-wrap:wrap}
+.form-radio legend{font-size:12px;font-weight:600;margin-bottom:10px}
+.form-radio label{display:flex;align-items:center;gap:7px;font-weight:400}
+.form-radio input{accent-color:var(--green)}
+.form-privacy{font-size:11px;color:var(--muted);line-height:1.5;margin:0}
+.form-honey{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.appointment-form .button{justify-self:start;cursor:pointer}
+@media(max-width:900px){.contact-page-grid{grid-template-columns:1fr;gap:38px;padding-block:50px 65px}.contact-options{grid-template-columns:repeat(3,1fr)}.contact-option{padding:16px}}
+@media(max-width:650px){.contact-options,.form-row{grid-template-columns:1fr}.appointment-panel{padding:24px 20px}.contact-page-grid{padding-block:40px 52px}}
+
 /* Compact introduction shared by all interior pages. */
 .page-intro{padding:22px 0 32px}
 .breadcrumbs{margin-bottom:22px}

@@ -7,13 +7,14 @@ import NailCare from './pages/NailCare.jsx';
 import SkinCare from './pages/SkinCare.jsx';
 import Faq from './pages/Faq.jsx';
 import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
 import NotFound from './pages/NotFound.jsx';
 import { routes } from './routes.js';
 
 export default function App() {
   const path = `${window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '')}/`;
   const route = routes.find(item => item.path === path);
-  const pages = { '/': <Home />, '/servicios/equipamientos/': <Equipment />, '/servicios/capilares/': <Capillaries />, '/servicios/unas/': <NailCare />, '/servicios/piel/': <SkinCare />, '/preguntas-frecuentes/': <Faq />, '/nosotros/': <About /> };
+  const pages = { '/': <Home />, '/servicios/equipamientos/': <Equipment />, '/servicios/capilares/': <Capillaries />, '/servicios/unas/': <NailCare />, '/servicios/piel/': <SkinCare />, '/preguntas-frecuentes/': <Faq />, '/nosotros/': <About />, '/contacto/': <Contact /> };
   useEffect(() => {
     document.title = `${route?.title || 'Página no encontrada'} | 980 Laser`;
     const description = document.querySelector('meta[name="description"]');

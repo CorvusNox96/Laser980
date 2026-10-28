@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { serviceLinks } from '../routes.js';
-import { whatsappUrl } from '../contact.js';
 
 function Brand() {
   return <a className="brand" href="/" aria-label="980 Tratamientos Laser, inicio"><img src={`${import.meta.env.BASE_URL}logo-980-tipografia.png`} alt="980 Tratamientos Laser" width="2089" height="753" /></a>;
@@ -31,10 +30,10 @@ export default function Layout({ path, children }) {
           </div>
         </div>
         {finalLinks.map(([title, href]) => <a key={href} href={href} aria-current={path === href ? 'page' : undefined}>{title}</a>)}
-        <a className="button button-small nav-contact" href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">Contáctanos ↗</a>
+        <a className="button button-small nav-contact" href="/contacto/" aria-current={path === '/contacto/' ? 'page' : undefined}>Contáctanos ↗</a>
       </nav>
     </div></header>
     <main id="contenido" tabIndex="-1">{children}</main>
-    <footer className="footer container"><div className="footer-top"><Brand /><p>La precisión de la tecnología,<br />la confianza de la experiencia.</p><a href="#contenido" className="text-link">Volver arriba ↑</a></div><nav className="footer-links" aria-label="Navegación del pie"><a href="/">Inicio</a>{serviceLinks.map(({ title, path: href }) => <a href={href} key={href}>{title}</a>)}{finalLinks.map(([title, href]) => <a href={href} key={href}>{title}</a>)}</nav><div className="footer-bottom"><span>© {new Date().getFullYear()} 980 Laser. Estética y bienestar.</span><span>La Habana, Cuba.</span></div></footer>
+    <footer className="footer container"><div className="footer-top"><Brand /><p>La precisión de la tecnología,<br />la confianza de la experiencia.</p><a href="#contenido" className="text-link">Volver arriba ↑</a></div><nav className="footer-links" aria-label="Navegación del pie"><a href="/">Inicio</a>{serviceLinks.map(({ title, path: href }) => <a href={href} key={href}>{title}</a>)}{finalLinks.map(([title, href]) => <a href={href} key={href}>{title}</a>)}<a href="/contacto/">Contáctanos</a></nav><div className="footer-bottom"><span>© {new Date().getFullYear()} 980 Laser. Estética y bienestar.</span><span>La Habana, Cuba.</span></div></footer>
   </>;
 }

@@ -33,6 +33,10 @@ Selecciona el repositorio `CorvusNox96/Laser980` y la rama `main`. Deja Root Dir
 
 Render publica directamente los archivos generados en `dist/`.
 
+## Solicitudes de cita
+
+La página `/contacto/` reúne el teléfono, WhatsApp, correo y una referencia provisional de ubicación. El formulario envía las solicitudes a `980lasser@gmail.com` mediante FormSubmit, con el asunto «Nueva solicitud de cita | 980 Laser». Para activarlo, envía una solicitud de prueba desde la página publicada y confirma el correo de activación que recibirá esa cuenta. Hasta completar esa confirmación no se entregarán las solicitudes. El formulario solicita solo datos de contacto, servicio de interés y preferencias para coordinar la cita; no confirma una reserva automáticamente.
+
 ## Estructura
 
 ```text
