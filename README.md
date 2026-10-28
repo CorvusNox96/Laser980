@@ -22,6 +22,8 @@ npm run preview
 
 La compilación genera los archivos estáticos en `dist/`.
 
+Las fotos originales del equipo y el tratamiento se guardan en `assets/source-images/`. Antes de `npm run dev` y `npm run build`, `scripts/optimize-images.mjs` crea automáticamente versiones WebP ligeras en `public/optimized/`. Para actualizar una foto, reemplaza el original con el mismo nombre; no hace falta comprimirlo a mano. La carpeta generada no se guarda en Git.
+
 ## Despliegue en Render como sitio estático
 
 Selecciona el repositorio `CorvusNox96/Laser980` y la rama `main`. Deja Root Directory vacío.
