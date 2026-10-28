@@ -4,6 +4,7 @@ import { whatsappUrl } from '../contact.js';
 
 const address = 'Plaza de la Revolución, La Habana, Cuba';
 const mapUrl = 'https://www.google.com/maps/search/?api=1&query=Plaza+de+la+Revoluci%C3%B3n%2C+La+Habana%2C+Cuba';
+const mailEndpoint = import.meta.env.VITE_APPS_SCRIPT_URL || 'https://formsubmit.co/980lasser@gmail.com';
 
 export default function Contact() {
   return <>
@@ -23,7 +24,7 @@ export default function Contact() {
         <p className="eyebrow">SOLICITAR CITA</p>
         <h2>Cuéntanos cómo <em>podemos ayudarte.</em></h2>
         <p>Déjanos tus datos y el servicio que te interesa. Te responderemos para coordinar la cita; enviarla no confirma una reserva.</p>
-        <form className="appointment-form" action="https://formsubmit.co/980lasser@gmail.com" method="POST">
+        <form className="appointment-form" action={mailEndpoint} method="POST">
           <input type="hidden" name="_subject" value="Nueva solicitud de cita | 980 Laser" />
           <input type="hidden" name="_template" value="table" />
           <div className="form-honey" aria-hidden="true"><label htmlFor="appointment-company">Dejar vacío</label><input id="appointment-company" name="_honey" tabIndex="-1" autoComplete="off" /></div>
@@ -41,7 +42,7 @@ export default function Contact() {
             <fieldset className="form-radio"><legend>¿Este número tiene WhatsApp? <span>*</span></legend><label><input type="radio" name="Tiene WhatsApp" value="Sí" required /> Sí</label><label><input type="radio" name="Tiene WhatsApp" value="No" /> No</label></fieldset>
           </div>
           <label>Comentario adicional (opcional)<textarea name="Comentario" rows="3" maxLength="500" placeholder="Por ejemplo, el horario en que prefieres que te contactemos" /></label>
-          <p className="form-privacy">Usaremos estos datos solo para responder a tu solicitud de cita. El envío se procesa mediante FormSubmit.</p>
+          <p className="form-privacy">Usaremos estos datos solo para responder a tu solicitud de cita.{!import.meta.env.VITE_APPS_SCRIPT_URL && ' El envío se procesa mediante FormSubmit.'}</p>
           <button className="button" type="submit">Enviar solicitud <span aria-hidden="true">↗</span></button>
         </form>
       </div>

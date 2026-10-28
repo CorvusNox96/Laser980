@@ -33,9 +33,19 @@ Selecciona el repositorio `CorvusNox96/Laser980` y la rama `main`. Deja Root Dir
 
 Render publica directamente los archivos generados en `dist/`.
 
-## Solicitudes de cita
+## Solicitudes de cita y correo saliente
 
-La página `/contacto/` reúne el teléfono, WhatsApp, correo y una referencia provisional de ubicación. El formulario envía las solicitudes a `980lasser@gmail.com` mediante FormSubmit, con el asunto «Nueva solicitud de cita | 980 Laser». Para activarlo, envía una solicitud de prueba desde la página publicada y confirma el correo de activación que recibirá esa cuenta. Hasta completar esa confirmación no se entregarán las solicitudes. El formulario solicita solo datos de contacto, servicio de interés y preferencias para coordinar la cita; no confirma una reserva automáticamente.
+La página `/contacto/` reúne teléfono, WhatsApp, correo y una referencia provisional de ubicación. El formulario solicita datos de contacto, servicio de interés y preferencias para coordinar la cita; no confirma una reserva automáticamente.
+
+Para que los correos salgan desde `980lasser@gmail.com` sin guardar una contraseña de Gmail en Render:
+
+1. Entra en [Google Apps Script](https://script.google.com/) con `980lasser@gmail.com` y crea un proyecto nuevo.
+2. Sustituye su archivo `Code.gs` por el contenido de `google-apps-script/Code.gs` y guarda el proyecto.
+3. En **Implementar → Nueva implementación → Aplicación web**, selecciona **Ejecutar como: Yo** y **Quién tiene acceso: Cualquier usuario**. Autoriza el permiso para enviar correos y copia la URL terminada en `/exec`.
+4. En el sitio estático de Render, agrega la variable de entorno de compilación `VITE_APPS_SCRIPT_URL` con esa URL y selecciona **Save, rebuild, and deploy**.
+5. Envía una solicitud de prueba desde `/contacto/`. Verifica que aparece en la bandeja de entrada y en **Enviados** de `980lasser@gmail.com`.
+
+El asunto del correo incluye el servicio solicitado. Mientras `VITE_APPS_SCRIPT_URL` no esté configurada, el formulario conserva FormSubmit como mecanismo anterior. El script devuelve una página de confirmación al visitante después de enviar. Si cambias el código del script, actualiza la implementación en Google Apps Script.
 
 ## Estructura
 
