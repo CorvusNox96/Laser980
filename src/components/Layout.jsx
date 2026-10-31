@@ -1,4 +1,4 @@
-import { whatsappUrl } from '../contact.js';
+import SocialLinks from './SocialLinks.jsx';
 import { useState } from 'react';
 import { serviceLinks } from '../routes.js';
 
@@ -35,6 +35,6 @@ export default function Layout({ path, children }) {
       </nav>
     </div></header>
     <main id="contenido" tabIndex="-1">{children}</main>
-    <footer className="site-footer"><div className="container footer-grid"><div><Brand/><p>Cuidado personalizado de la piel, las uñas y los vasos superficiales en La Habana.</p><a href="#contenido">Volver arriba ↑</a></div><nav aria-label="Servicios del pie"><h2>Tratamientos</h2>{serviceLinks.map(item=><a href={item.path} key={item.path}>{item.title}</a>)}</nav><nav aria-label="Información del centro"><h2>Conoce 980</h2><a href="/nosotros/">Nuestro equipo</a><a href="/preguntas-frecuentes/">Preguntas frecuentes</a><a href="/contacto/">Coordinar una visita</a><a href={whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></nav><div><h2>Contacto y ubicación</h2><a href="tel:+5358939703">+53 5 8939703</a><a href="mailto:980lasser@gmail.com">980lasser@gmail.com</a><p>Plaza de la Revolución<br/>La Habana, Cuba</p><small>Confirma la dirección exacta antes de visitarnos.</small></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} 980 Laser</span><span>Atención con cita previa</span></div></footer>
+    <footer className="site-footer"><div className="container footer-grid"><div><Brand/><p>Cuidado personalizado de la piel, las uñas y los vasos superficiales en La Habana.</p><a href="#contenido">Volver arriba ↑</a></div><SocialLinks/><nav aria-label="Información del centro"><h2>Conoce 980</h2><a href="/nosotros/">Nuestro equipo</a><a href="/preguntas-frecuentes/">Preguntas frecuentes</a><a href="/contacto/">Coordinar una visita</a></nav><div><h2>Contacto y ubicación</h2><a href="tel:+5358939703">+53 5 8939703</a><a href="mailto:980lasser@gmail.com">980lasser@gmail.com</a><p>Plaza de la Revolución<br/>La Habana, Cuba</p><small>Confirma la dirección exacta antes de visitarnos.</small></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} 980 Laser</span><span>Atención con cita previa</span></div></footer>
   </>;
 }

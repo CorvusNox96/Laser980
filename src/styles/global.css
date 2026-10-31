@@ -204,3 +204,23 @@
 .home-intro{align-items:center;text-align:center}.home-intro>p:not(.eyebrow){margin-inline:auto}.home-intro h2{max-width:800px}
 .treatment-gallery{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center;gap:20px 50px;padding-block:48px 30px}.gallery-heading{margin:0;max-width:400px}.gallery-heading h2{font-size:clamp(27px,3vw,38px);line-height:1.25}.treatment-collage{display:block;position:relative;width:100%;max-width:600px;height:370px;margin-left:auto}.treatment-collage figure:first-child{position:absolute;left:0;top:0;width:76%;height:280px;border-radius:22px}.treatment-collage figure:last-child{position:absolute;right:0;bottom:0;width:52%;height:205px;border:7px solid #fbfcfe;border-radius:22px;box-shadow:0 14px 34px #16385126}.treatment-collage figcaption{padding:40px 16px 14px;font-size:11px;line-height:1.4}.treatment-collage figcaption span{display:none}.gallery-credit{grid-column:1/-1;max-width:850px;margin:4px 0 0;font-size:10px}.service-editorial{padding-top:35px}@media(max-width:760px){.treatment-gallery{grid-template-columns:1fr;gap:22px;padding-block:32px 20px}.gallery-heading{max-width:100%}.treatment-collage{max-width:510px;margin-inline:auto;height:315px}.treatment-collage figure:first-child{height:245px;width:79%;border-radius:20px}.treatment-collage figure:last-child{height:170px;width:55%;border-width:5px}.gallery-credit{font-size:10px}.home-intro{align-items:center;text-align:center}}@media(max-width:390px){.treatment-collage{height:285px}.treatment-collage figure:first-child{height:215px}.treatment-collage figure:last-child{height:155px}.treatment-collage figcaption{font-size:10px;padding-inline:10px}}
 .site-footer .brand{display:flex;align-items:center;justify-content:center;width:220px;max-width:100%;padding:18px;overflow:hidden}.site-footer .brand img{display:block;width:100%;max-width:100%;min-width:0;height:auto;object-fit:contain;filter:none}
+
+.footer-socials .social-link{display:flex;align-items:center;gap:12px;min-height:46px;margin-bottom:10px;padding:10px 12px;border:1px solid #49667d;border-radius:9px;font-size:13px}.social-link svg{flex-shrink:0}.social-link>span:last-child:not(:nth-child(2)){margin-left:auto}.footer-socials a:hover{background:#244b68;text-decoration:none}.footer-socials .social-pending{color:#c0d4e3}.footer-socials small{display:block;font-size:10px;line-height:1.4}.social-whatsapp svg{color:#57df91}.social-instagram svg{color:#f1a5cf}.social-facebook svg{color:#94baff}
+
+/* Unified footer rhythm: all columns share simple, aligned link rows. */
+.site-footer .footer-grid{grid-template-columns:1.25fr .85fr 1fr 1.2fr;align-items:start;gap:40px}
+.site-footer .footer-grid h2{font-size:14px;line-height:1.5;margin:0 0 20px;font-weight:600;letter-spacing:0}
+.site-footer .footer-grid a,.site-footer .footer-grid .social-link{font-size:13px;line-height:1.6;color:#d4e2ec}
+.site-footer .footer-grid>nav>a,.site-footer .footer-grid>div:last-child>a{min-height:32px;margin:0 0 8px;padding:5px 0}
+.site-footer .footer-socials .social-link{display:flex;align-items:center;gap:10px;min-height:32px;margin:0 0 8px;padding:5px 0;border:0;border-radius:0;background:transparent}
+.site-footer .footer-socials .social-link svg{width:18px;height:18px;color:currentColor}
+.site-footer .footer-socials .social-link>span:nth-child(2){display:flex;align-items:baseline;flex-wrap:wrap;gap:6px}
+.site-footer .footer-socials .social-link small{display:inline;font-size:9px;line-height:1.4;color:#9cb5c8}
+.site-footer .footer-socials .social-link>span:last-child:not(:nth-child(2)){margin-left:0;font-size:11px}
+.site-footer .footer-grid a:hover{color:#fff;background:transparent;text-decoration:underline;text-underline-offset:4px}
+.site-footer .footer-grid p{font-size:13px;line-height:1.8;margin-top:12px;margin-bottom:14px}
+.site-footer .footer-grid small{font-size:11px;line-height:1.7;color:#9cb5c8}
+.site-footer .footer-grid .brand{margin-bottom:20px}
+@media(max-width:1000px){.site-footer .footer-grid{grid-template-columns:1fr 1fr;gap:36px}}
+@media(max-width:760px){.site-footer .footer-grid>div:first-child{grid-column:1/-1}.site-footer .footer-grid{gap:30px 24px}.site-footer .footer-grid h2{margin-bottom:15px}}
+@media(max-width:420px){.site-footer .footer-grid{grid-template-columns:1fr}.site-footer .footer-grid>div:first-child{grid-column:auto}}
