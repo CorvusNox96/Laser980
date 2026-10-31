@@ -1,5 +1,2 @@
-import { PageIntro } from '../components/Layout.jsx';
-
-export default function NailCare() {
-  return <PageIntro title="Cuidado de uñas" />;
-}
+import ServicePage from '../components/ServicePage.jsx';
+export default function NailCare(){return <ServicePage title="Cuidado de uñas" intro="Valoración y orientación para uñas con sospecha de onicomicosis." sections={[["Primero, confirmar el diagnóstico","Los cambios en las uñas necesitan una valoración para identificar su causa antes de elegir un tratamiento."],["Un plan adaptado a tu caso","El láser puede formar parte de algunas estrategias para la onicomicosis. La valoración determina si se necesita tratamiento antifúngico adicional."],["Seguimiento del progreso","La mejoría visible requiere tiempo. Te orientaremos sobre el cuidado de las uñas, la evolución esperada y las revisiones necesarias."]]}/>;}

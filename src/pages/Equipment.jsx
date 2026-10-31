@@ -1,5 +1,2 @@
-import { PageIntro } from '../components/Layout.jsx';
-
-export default function Equipment() {
-  return <PageIntro title="Equipamientos" />;
-}
+import ServicePage from '../components/ServicePage.jsx';
+export default function Equipment(){return <ServicePage title="Tecnología láser" intro="La tecnología acompaña el criterio profesional y la valoración de cada persona." sections={[["Láser de 980 nm","El centro utiliza tecnología láser de 980 nanómetros. La elección de sus aplicaciones y parámetros depende de las características de la zona, la piel y la valoración profesional."],["Cómo elegimos el procedimiento","Antes de una sesión explicamos su finalidad, las sensaciones que pueden aparecer y los cuidados necesarios. No todos los procedimientos son adecuados para todos los tipos de piel."],["El equipo humano importa","Los profesionales de 980 Laser orientan la planificación y el seguimiento. Conoce a quienes te atenderán en la página Nosotros."]]}/>;}

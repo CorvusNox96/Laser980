@@ -1,3 +1,4 @@
+import { whatsappUrl } from '../contact.js';
 import { useState } from 'react';
 import { serviceLinks } from '../routes.js';
 
@@ -10,7 +11,7 @@ export function PageIntro({ title, children }) {
 export default function Layout({ path, children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const finalLinks = [['Preguntas frecuentes', '/preguntas-frecuentes/'], ['Nosotros', '/nosotros/']];
+  const finalLinks = [['Tecnología', '/servicios/equipamientos/'], ['Nosotros', '/nosotros/'], ['Preguntas frecuentes', '/preguntas-frecuentes/']];
   function closeOnEscape(event) {
     if (event.key !== 'Escape') return;
     if (servicesOpen) { setServicesOpen(false); document.getElementById('services-toggle')?.focus(); }
@@ -26,14 +27,14 @@ export default function Layout({ path, children }) {
         <div className="services-dropdown" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setServicesOpen(false); }}>
           <button id="services-toggle" className={`services-toggle${path.startsWith('/servicios/') ? ' nav-active' : ''}`} aria-expanded={servicesOpen} aria-controls="services-submenu" onClick={() => setServicesOpen(!servicesOpen)}>Servicios <span aria-hidden="true">{servicesOpen ? '▴' : '▾'}</span></button>
           <div id="services-submenu" className="services-submenu" hidden={!servicesOpen}>
-            {serviceLinks.map(({ title, path: href }, index) => <div key={href}>{index === 1 && <hr />}<a href={href} aria-current={path === href ? 'page' : undefined}>{title}</a></div>)}
+            {serviceLinks.filter(item => item.path !== '/servicios/equipamientos/').map(({ title, path: href }, index) => <div key={href}><a href={href} aria-current={path === href ? 'page' : undefined}>{title}</a></div>)}
           </div>
         </div>
         {finalLinks.map(([title, href]) => <a key={href} href={href} aria-current={path === href ? 'page' : undefined}>{title}</a>)}
-        <a className="button button-small nav-contact" href="/contacto/" aria-current={path === '/contacto/' ? 'page' : undefined}>Contáctanos ↗</a>
+        <a className="nav-contact" href="/contacto/" aria-current={path === '/contacto/' ? 'page' : undefined}>Contacto</a>
       </nav>
     </div></header>
     <main id="contenido" tabIndex="-1">{children}</main>
-    <footer className="footer container"><div className="footer-top"><Brand /><p>La precisión de la tecnología,<br />la confianza de la experiencia.</p><a href="#contenido" className="text-link">Volver arriba ↑</a></div><nav className="footer-links" aria-label="Navegación del pie"><a href="/">Inicio</a>{serviceLinks.map(({ title, path: href }) => <a href={href} key={href}>{title}</a>)}{finalLinks.map(([title, href]) => <a href={href} key={href}>{title}</a>)}<a href="/contacto/">Contáctanos</a></nav><div className="footer-bottom"><span>© {new Date().getFullYear()} 980 Laser. Estética y bienestar.</span><span>La Habana, Cuba.</span></div></footer>
+    <footer className="site-footer"><div className="container footer-grid"><div><Brand/><p>Cuidado personalizado de la piel, las uñas y los vasos superficiales en La Habana.</p><a href="#contenido">Volver arriba ↑</a></div><nav aria-label="Servicios del pie"><h2>Tratamientos</h2>{serviceLinks.map(item=><a href={item.path} key={item.path}>{item.title}</a>)}</nav><nav aria-label="Información del centro"><h2>Conoce 980</h2><a href="/nosotros/">Nuestro equipo</a><a href="/preguntas-frecuentes/">Preguntas frecuentes</a><a href="/contacto/">Coordinar una visita</a><a href={whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></nav><div><h2>Contacto y ubicación</h2><a href="tel:+5358939703">+53 5 8939703</a><a href="mailto:980lasser@gmail.com">980lasser@gmail.com</a><p>Plaza de la Revolución<br/>La Habana, Cuba</p><small>Confirma la dirección exacta antes de visitarnos.</small></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} 980 Laser</span><span>Atención con cita previa</span></div></footer>
   </>;
 }
