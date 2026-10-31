@@ -18,9 +18,9 @@ export function Hero() {
         <div className="hero-actions"><a className="button" href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">Contáctanos <Arrow /></a></div>
       </div>
       <div className="service-hero-media">
-        <img src={`${import.meta.env.BASE_URL}optimized/team-picture.webp`} alt="El equipo de 980 Laser" fetchPriority="high" />
+        <img src={`${import.meta.env.BASE_URL}laser-treatment-hero.jpg`} alt="Profesional realizando un tratamiento facial a una paciente, ambas con protección ocular" width="1200" height="800" fetchPriority="high" />
         <div className="service-hero-overlay" />
-        <span className="service-hero-credit">Conoce a quienes te acompañan</span>
+        <span className="service-hero-credit">Imagen de ambientación · Anna Shvets / Pexels</span>
       </div>
     </div>
   </section>;
